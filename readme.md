@@ -207,31 +207,31 @@ En JavaScript, la asincronía se maneja principalmente a través de callbacks, p
     });
   ```
 
-  - ### Async/Await
+- ### Async/Await
 
-    Son una forma moderna de trabajar con promesas en JavaScript, facilitando la escritura de código asíncrono de manera más legible y secuencial.
+  Son una forma moderna de trabajar con promesas en JavaScript, facilitando la escritura de código asíncrono de manera más legible y secuencial.
 
-    - <b>Async:</b> Se utiliza para definir una función asíncrona que siempre devuelve una promesa.
-    - <b>Await:</b> Se utiliza dentro de una función async para esperar el resultado de una promesa antes de continuar con la ejecución del código.
+  - <b>Async:</b> Se utiliza para definir una función asíncrona que siempre devuelve una promesa.
+  - <b>Await:</b> Se utiliza dentro de una función async para esperar el resultado de una promesa antes de continuar con la ejecución del código.
 
-    ```js
-    // Definir una función asíncrona
-    async function fetchData() {
-      try {
-        // Esperar a que la promesa se resuelva
-        const response = await fetch('https://api.example.com/data');
-        if (!response.ok) {
-          throw new Error('Red no está disponible');
-        }
-        const data = await response.json(); // Esperar el parseo del JSON
-        console.log(data); // Manejar los datos recibidos
-      } catch (error) {
-        console.error('Hubo un problema con la solicitud:', error); // Manejar errores
+  ```js
+  // Definir una función asíncrona
+  async function fetchData() {
+    try {
+      // Esperar a que la promesa se resuelva
+      const response = await fetch('https://api.example.com/data');
+      if (!response.ok) {
+        throw new Error('Red no está disponible');
       }
+      const data = await response.json(); // Esperar el parseo del JSON
+      console.log(data); // Manejar los datos recibidos
+    } catch (error) {
+      console.error('Hubo un problema con la solicitud:', error); // Manejar errores
     }
-    // Llamar a la función asíncrona
-    fetchData();
-    ```
+  }
+  // Llamar a la función asíncrona
+  fetchData();
+  ```
 
 ## PETICIONES ASINCRONAS
 
